@@ -15,4 +15,4 @@ Summary of Progress
 
 - Successfully tested the backend by running it on a different port (5000) and fetching data from the MySQL database.
 
-![Screenshot](./images/SQLscreenshot.png)
+![Screenshot](./images/SQLscreenshot123.png)
