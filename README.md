@@ -21,17 +21,11 @@ Summary of Progress
 
 Summary of Progress
 
-- Set up the frontend of the project using React and connected it to the backend using Axios.
+- Initialized the project frontend using React and successfully connected it to the backend via Axios for data fetching.
 
-- Created a UserTable component to display user information in a table format.
+- Updated the UserTable component to display user information in a structured table format & updated styling.
 
-- Created a UserForm component to add new users to the database.
-
-- Secured sensitive information, such as database credentials, by using a .env file and loading it with the help of dotenv.
-
-- Configured the project to ignore sensitive and unnecessary files using a .gitignore file (including .env, .idea, and node_modules).
-
-- Successfully tested the frontend by running it on a different port (3000) and fetching data from the MySQL database.
+- Successfully tested the frontend by running it on a separate port (3000) and verifying data fetching from the MySQL database.
 
 # Screenshot of the frontend interface:
 ![Screenshot](./images/screenshot2.png)
