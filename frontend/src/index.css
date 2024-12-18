@@ -1,0 +1,82 @@
+
+ body, html {
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
+}
+ header {
+    margin: 0;
+    background-color: #009879;
+    color: white;
+    width: 100vw;
+
+}
+
+ h1 {
+    padding: 12px;
+    text-align: center;
+    margin: 3px;
+}
+
+ a {
+    color: blue;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+ h2 {
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    color: #009879;
+    background-color: #ffffff;
+    margin: 10px;
+ }
+
+
+ .userTable {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    min-width: 50%;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+}
+
+ .userTable  thead  tr  {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+ .userTable  th,
+ .userTable  td {
+    outline: 4px solid #dddddd;
+    padding: 12px 15px;
+}
+
+ .userTable  tbody  tr  {
+    border-bottom: 1px solid #dddddd;
+ }
+
+ .userTable  tbody  tr:nth-of-type(even)  {
+    background-color: #f3f3f3;
+ }
+
+ .userTable  tbody  tr:last-of-type  {
+    border-bottom: 2px solid #009879;
+ }
+
+ footer{
+    background-color: #009879;
+    color: white;
+    text-align: center;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;}
+

@@ -14,5 +14,24 @@ Summary of Progress
 - Configured the project to ignore sensitive and unnecessary files using a .gitignore file (including .env, .idea, and node_modules).
 
 - Successfully tested the backend by running it on a different port (5000) and fetching data from the MySQL database.
-
+# Screenshot of the MySQL database:
 ![Screenshot](./images/SQLscreenshot123.png)
+
+12/18/24
+
+Summary of Progress
+
+- Set up the frontend of the project using React and connected it to the backend using Axios.
+
+- Created a UserTable component to display user information in a table format.
+
+- Created a UserForm component to add new users to the database.
+
+- Secured sensitive information, such as database credentials, by using a .env file and loading it with the help of dotenv.
+
+- Configured the project to ignore sensitive and unnecessary files using a .gitignore file (including .env, .idea, and node_modules).
+
+- Successfully tested the frontend by running it on a different port (3000) and fetching data from the MySQL database.
+
+# Screenshot of the frontend interface:
+![Screenshot](./images/screenshot2.png)
