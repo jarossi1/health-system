@@ -29,3 +29,20 @@ Summary of Progress
 
 # Screenshot of the frontend interface:
 ![Screenshot](./images/screenshot2.png)
+
+12/19/24
+
+Summary of Progress
+- Added route paths for pages to allow users to navigate seamlessly across the application.
+- Nav component was created to provide a consistent navigation bar across the application. Styling was applied to the navigation bar to enhance the user interface.
+- The Link component from React Router is used to link pages together and allow users to navigate without full-page reloads.
+- Links are set up to navigate between the various routes defined in the app.
+- A form page was created where users can input data to add new records to the database.
+- The form is connected to the backend through a POST request to send the data to the server.
+- The server (server.js) is configured to handle the POST request that adds new data to the MySQL database.
+
+# Screenshot of the form page:
+![Screenshot](./images/screenshot3.png)
+
+# After screenshot of the UserTable page with React rendering data from the SQL database
+![Screenshot](./images/screenshot4.png)

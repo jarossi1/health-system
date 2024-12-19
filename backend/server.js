@@ -1,15 +1,19 @@
+
+// Loading environment variables
 require('dotenv').config();
 
-const express = require('express');
-const cors = require('cors');
-const app = express();
+// Importing required modules
+const express = require('express'); // Express web framework for HTTP requests
+const cors = require('cors'); // Middleware for enabling CORS for cross-origin requests
+const app = express(); // Creating an Express app
 
-app.use(cors());
-app.use(express.json());
+app.use(cors()); // Enabling CORS for cross-origin requests
+app.use(express.json()); // Middleware for parsing JSON request bodies
 
+// Configuring MySQL database connection
+const mysql = require('mysql2');  // MySQL library
 
-const mysql = require('mysql2');
-
+// Creating a connection to the MySQL database
 const db = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
@@ -17,6 +21,7 @@ const db = mysql.createConnection({
     database: process.env.DB_NAME
 });
 
+// Connecting to the MySQL database
 db.connect((err) => {
     if (err) {
         console.error('Error connecting to the database:', err);
@@ -25,6 +30,7 @@ db.connect((err) => {
     }
 });
 
+// API endpoint for fetching user data from the database
 app.get('/api/users', (req, res) => {
     const sql = 'SELECT * FROM users';
     db.query(sql, (err, results) => {
@@ -38,7 +44,21 @@ app.get('/api/users', (req, res) => {
     });
 });
 
+app.post("/api/users", (req, res) => {
+    const q = "INSERT INTO users (`name`, `email`, `department`) VALUES (?)";
+    const values = [
+        req.body.name,
+        req.body.email,
+        req.body.department
+    ];
 
+
+
+    db.query(q, [values], (err, data) => {
+        if (err) return res.json(err);
+        return res.json("User has been created successfully.");
+    });
+})
 
 const PORT = process.env.PORT || 3000;
 
