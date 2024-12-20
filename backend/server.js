@@ -7,6 +7,8 @@ const express = require('express'); // Express web framework for HTTP requests
 const cors = require('cors'); // Middleware for enabling CORS for cross-origin requests
 const app = express(); // Creating an Express app
 
+
+
 app.use(cors()); // Enabling CORS for cross-origin requests
 app.use(express.json()); // Middleware for parsing JSON request bodies
 
@@ -52,13 +54,39 @@ app.post("/api/users", (req, res) => {
         req.body.department
     ];
 
-
-
     db.query(q, [values], (err, data) => {
         if (err) return res.json(err);
         return res.json("User has been created successfully.");
     });
 })
+
+
+
+app.put("/api/users/:id", (req, res) => {
+
+    const id = req.params.id;
+    const { name, email, department } = req.body;
+    const q = "UPDATE users SET `name` = ?, `email` = ?, `department` = ? WHERE `idhealth_user` = ?";
+    db.query(q, [name, email, department, id], (err, data) => {
+        if (err){
+            console.error('Error updating user:', err);
+            res.status(500).json({ error: 'Error updating user', details: err });
+        }
+        return res.json("User has been updated successfully.");
+    })
+})
+
+
+
+// app.delete("/api/users/:id", (req, res) => {
+//     const userId = req.params.id;
+// })
+//
+// db.query("DELETE FROM users WHERE idhealth_user = ?", [userId], (err, data) => {
+//     if (err) return res.json(err);
+//     return res.json("User has been deleted.");
+// })
+
 
 const PORT = process.env.PORT || 3000;
 

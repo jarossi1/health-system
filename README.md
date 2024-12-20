@@ -5,7 +5,7 @@ Summary of Progress
 
 - Set up the backend of the project using Express and connected it to a MySQL database (health_db).
 
-- Created the MySQL database and added a users table with 5 sample users, including fields for ID, name, email, and age.
+- Created the MySQL database and added a users table with 5 sample users, including fields for ID, name, email, and department.
 
 - Created basic CRUD API routes to interact with the users table in the MySQL database.
 
@@ -46,3 +46,24 @@ Summary of Progress
 
 # After screenshot of the UserTable page with React rendering data from the SQL database
 ![Screenshot](./images/screenshot4.png)
+
+
+12/18/24
+
+Summary of Progress
+
+- Added an update table with input fields in UserTable.jsx to modify user info in React.
+- Integrated Axios to send updated user data to the backend.
+- Created a PUT endpoint in Express (/api/users/:id) to handle user data updates.
+- Updated MySQL database with the modified user information from the React frontend.
+- Improved .gitignore to exclude unnecessary files and ensure proper commit handling.
+
+# Screenshot of the update table:
+![Screenshot](./images/screenshot5.png)
+-
+-
+![Screenshot](./images/screenshot6.png)
+
+
+# After screenshot of the update table with React rendering data from the SQL database
+![Screenshot](./images/screenshot7.png)
