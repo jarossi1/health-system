@@ -1,4 +1,17 @@
 # Health Project
+
+12/20/24
+
+Summary of Progress
+
+- Progress Update - 12/20/24
+
+- Currently focusing on enhancing and updating the Frontend UI for improved user experience and interface design.
+
+![Screenshot](./images/screenshot9.png)
+
+
+
 12/17/24
 
 Summary of Progress
